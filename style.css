@@ -1,0 +1,25 @@
+    body {
+      background: linear-gradient(to bottom, rgb(240, 2, 2), #000000);
+      color: #000000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+    .navbar .navlink, .navbar .navbar-brand {
+        color: #000000 !important;
+    }
+    .container {
+      color: #000000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: auto;
+    }
