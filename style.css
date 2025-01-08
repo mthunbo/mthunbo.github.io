@@ -1,18 +1,19 @@
     body {
-      background: linear-gradient(to bottom, rgba(240, 2, 2, 0.664), #000000);
-      color: #000000;
+      background: linear-gradient(to bottom, rgba(190, 2, 2), #000000);
+      color: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
     .navbar {
         background-color:rgba(0, 0, 0, 0.5);
+        color: #fff;
     }
-    .navbar .navlink, .navbar .navbar-brand {
-        color: #000000 !important;
+    .navbar .nav-link, .navbar .navbar-brand {
+        color: #fff !important;
     }
     .container {
-      color: #000000;
+      color: #fff;
       padding: 20px;
       border-radius: 10px;
     }
