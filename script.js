@@ -1,5 +1,5 @@
 document.getElementById("kontaktForm").addEventListener("submit", function(event) {
-  event.preventDefault(); 
+  event.preventDefault();
   const captchaInput = document.getElementById("captcha").value.trim();
   const captchaMessage = document.getElementById("captchaMessage");
 
@@ -8,4 +8,8 @@ document.getElementById("kontaktForm").addEventListener("submit", function(event
   } else {
     captchaMessage.innerHTML = '<span class="text-danger">Forkert CAPTCHA. Prøv igen.</span>';
   }
+});
+
+document.querySelector(".dropdown-menu").addEventListener("click", function(event) {
+  event.stopPropagation(); 
 });
