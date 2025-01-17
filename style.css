@@ -2,6 +2,8 @@
     --transition-speed-button: 300ms;
     --transition-speed-paragraph: 200ms;
 }
+
+/*General styling */
 body {
   background: linear-gradient(to bottom, rgba(190, 2, 2), #000000);
   color: #fff;
@@ -54,6 +56,7 @@ footer {
     width: 100%;
 }
 
+/*Controls the fading animation of the pages and buttons */
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
@@ -70,4 +73,24 @@ footer {
 }
 .hidden {
     display: none;
+}
+
+/*Controls the stylig of the GitHub repo cards */
+.repo-card {
+  margin-bottom: 20px;
+}
+.repo-card .card-body {
+  text-align: center;
+}
+.repo-card .card-body h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.repo-card .card-body p {
+  font-size: 0.9rem;
+  color: #000000;
+}
+.repo-card .card-body a {
+  text-decoration: none;
+  color: #000000;
 }
