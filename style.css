@@ -1,6 +1,6 @@
 :root { 
-    --transition-speed-button: 300ms;
-    --transition-speed-paragraph: 200ms;
+  --transition-speed-button: 300ms;
+  --transition-speed-paragraph: 200ms;
 }
 
 /*General styling */
@@ -12,7 +12,7 @@ body {
   flex-direction: column;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 footer {
   background-color: #000000;
@@ -41,38 +41,42 @@ footer {
   padding: 20px;
   border-radius: 10px;
 }
+
+.content {
+  display: block;
+}
 .content-section {
   display: none;
 }
 .content-section.active {
   display: block;
 }
-.content-section .table {
-    width: 100%;
-    margin-bottom: 1rem;
+.content-section.table {
+  width: 100%;
+  margin-bottom: 1rem;
 }
-.content-section .card {
-    margin-top: 1rem;
-    width: 100%;
+.content-section.card {
+  margin-top: 1rem;
+  width: 100%;
 }
 
 /*Controls the fading animation of the pages and buttons */
 @keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 .fade-in {
-    animation: fadeIn var(--transition-speed-paragraph) linear forwards;
+  animation: fadeIn var(--transition-speed-paragraph) linear forwards;
 }
 .fade-out {
-    animation: fadeOut var(--transition-speed-paragraph) linear forwards;
+  animation: fadeOut var(--transition-speed-paragraph) linear forwards;
 }
 .hidden {
-    display: none;
+  display: none;
 }
 
 /*Controls the stylig of the GitHub repo cards */

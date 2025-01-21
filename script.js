@@ -17,18 +17,22 @@ document.querySelector(".dropdown-menu").addEventListener("click", function(even
 });
 
 
-//Fades the current divs(pages) out and fades the selected one in
-let currentParagraph = "Introduktion";
-
+// Function that fades the current divs(pages) out and fades the selected one in
+// Retrieve from localStorage or default to "Introduktion"
+let currentParagraph = localStorage.getItem('currentParagraph') || "Introduktion";
 let prevParagraph;
 let nextParagraph;
 
 function changeParagraph(newParagraph) {
-    if (currentParagraph != newParagraph) {
+    if (currentParagraph !== newParagraph) {
         prevParagraph = document.getElementById(currentParagraph);
         nextParagraph = document.getElementById(newParagraph);
 
         currentParagraph = newParagraph;
+        
+        // Store the current paragraph in localStorage
+        localStorage.setItem('currentParagraph', currentParagraph);
+        
         prevParagraph.classList.add("fade-out");
 
         prevParagraph.addEventListener('animationend', () => {
@@ -39,12 +43,21 @@ function changeParagraph(newParagraph) {
             nextParagraph.classList.add("fade-in");
 
             nextParagraph.addEventListener('animationend', () => {
-            nextParagraph.classList.remove("fade-in");
-            })
-        })
+                nextParagraph.classList.remove("fade-in");
+            });
+        });
     }
 }
 
+// Ensure the active paragraph is displayed on page load
+window.onload = function() {
+    const activeParagraph = document.getElementById(currentParagraph);
+    if (activeParagraph) {
+        activeParagraph.classList.remove("hidden");
+        activeParagraph.classList.add("fade-in");
+    }
+};
+    
 // Fetches GitHub repos using the GitHub API and appends them to a list of cards
 document.addEventListener("DOMContentLoaded", function() {
   const username = "mthunbo";
@@ -61,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         repoCard.innerHTML = `
           <div class="card repo-card">
-            <img src="https://raw.githubusercontent.com/UserName/${repo.name}/Master/profilePic.png" class="card-img-top" alt="${repo.name}">
+            <img src="repoPics/${repo.name}.png" class="card-img-top" alt="${repo.name}">
             <div class="card-body">
               <h5 class="card-title">${repo.name}</h5>
               <p class="card-text">${repo.description ? repo.description : 'No description available'}</p>
@@ -79,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
       repoListContainer.innerHTML = '<p class="text-danger">Failed to load repositories.</p>';
     });
 });
+
 // GitHub acc avatar link
 //https://avatars.githubusercontent.com/u/${repo.owner.id}?s=200
-// Repo social view img
-//https://repository-images.githubusercontent.com/919900128/0daf9470-8e73-423b-8574-9c6fcfb4ab88
