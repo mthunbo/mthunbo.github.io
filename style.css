@@ -42,6 +42,7 @@ footer {
   border-radius: 10px;
 }
 
+/*Styling of content blocks */
 .content {
   display: block;
 }
@@ -60,7 +61,7 @@ footer {
   width: 100%;
 }
 
-/*Controls the fading animation of the pages and buttons */
+/*Fading animation of the pages and buttons */
 @keyframes fadeOut {
   0% { opacity: 1; }
   100% { opacity: 0; }
@@ -79,7 +80,7 @@ footer {
   display: none;
 }
 
-/*Controls the stylig of the GitHub repo cards */
+/*Stylig for the GitHub repo cards */
 .repo-card {
   margin-bottom: 20px;
 }
@@ -103,4 +104,10 @@ footer {
   height: auto;
   max-height: 100%;
   object-fit: contain;
+}
+
+/*Styling for custom icons and similar */
+.social-icon {
+  text-decoration: none;
+  font-size: 30px;
 }
