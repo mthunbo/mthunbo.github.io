@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         repoCard.innerHTML = `
           <div class="card repo-card">
-            <img src="https://avatars.githubusercontent.com/u/${repo.owner.id}?s=200" class="card-img-top" alt="${repo.name}">
+            <img src="https://raw.githubusercontent.com/UserName/${repo.name}/Master/profilePic.png" class="card-img-top" alt="${repo.name}">
             <div class="card-body">
               <h5 class="card-title">${repo.name}</h5>
               <p class="card-text">${repo.description ? repo.description : 'No description available'}</p>
@@ -79,3 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
       repoListContainer.innerHTML = '<p class="text-danger">Failed to load repositories.</p>';
     });
 });
+// GitHub acc avatar link
+//https://avatars.githubusercontent.com/u/${repo.owner.id}?s=200
+// Repo social view img
+//https://repository-images.githubusercontent.com/919900128/0daf9470-8e73-423b-8574-9c6fcfb4ab88
