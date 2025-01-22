@@ -28,13 +28,14 @@ footer {
 .nav-link {
   transition: var(--transition-speed-button);
 }
-.nav-link:hover {
+.nav-link:hover, .navbar .navbar-toggler:hover {
     filter: grayscale(0%) opacity(1);
     background: #851d1d;
     color: #ececec;
 }
-.navbar .nav-link, .navbar .navbar-brand {
+.navbar .nav-link, .navbar .navbar-brand, .navbar .navbar-toggler {
   color: #fff !important;
+  border-color: #fff;
 }
 .container {
   color: #fff;
@@ -110,4 +111,8 @@ footer {
 .social-icon {
   text-decoration: none;
   font-size: 30px;
+}
+.menu-icon {
+  font-size: 25px;
+  color: #fff;
 }
