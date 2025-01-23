@@ -34,8 +34,8 @@ footer {
     color: #ececec;
 }
 .navbar .nav-link, .navbar .navbar-brand, .navbar .navbar-toggler {
-  color: #fff !important;
-  border-color: #fff;
+  color: #ffffff !important;
+  border-color: #ffffff00;
 }
 .container {
   color: #fff;

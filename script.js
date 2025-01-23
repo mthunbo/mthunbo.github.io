@@ -19,7 +19,7 @@ document.querySelector(".dropdown-menu").addEventListener("click", function(even
 
 // Function that fades the current divs(pages) out and fades the selected one in
 // Retrieve from localStorage or default to "Introduktion"
-let currentParagraph = localStorage.getItem('currentParagraph') || "Introdukcion";
+let currentParagraph = localStorage.getItem('currentParagraph') || "Introduction";
 let prevParagraph;
 let nextParagraph;
 
