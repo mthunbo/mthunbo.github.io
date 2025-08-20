@@ -1,1 +1,1 @@
-Repo contains my personal site, with links to other repos, work history and skills.
+Repo contains first attempt at portfolio website
